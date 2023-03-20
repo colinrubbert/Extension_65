@@ -1,0 +1,87 @@
+#info{
+	display: flex;
+	justify-content: flex-end;
+	position: fixed;
+	bottom: 0px;
+	background: white;
+	border-top: 1px solid #d4d2d0;
+	width: 100vw;
+	padding: 16px;
+	box-sizing: border-box;
+	z-index: 2;
+	span{
+		display: inline-block;
+	}
+	#selected{
+		padding: 0 10px;
+		margin: 0;
+		background: $gray1;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+		display: flex;
+		align-items: center;
+		font-weight: bold;
+		white-space: nowrap;
+	}
+	#triangle1{
+		width: $footer_height_half;
+		border-top: $footer_height_half solid $gray0;
+		border-bottom: $footer_height_half solid $gray0;
+		border-left: $footer_height_half solid $gray1;
+		box-sizing: content-box;
+	}
+	#opts{
+		& > div{
+			padding: 3px 20px 3px 10px;
+			display: flex;
+			flex-direction: column;
+		}
+		background: $gray0;
+		display: flex;
+		align-items: center;
+		margin-left: -20px;
+		padding: 0;
+		label{
+			white-space: nowrap;
+			line-height: 17px;
+			height: 17px;
+			&.disabled{
+				opacity: .4;
+				cursor: not-allowed;
+			}
+		}
+    b{
+      max-width: 250px;
+      line-height: 15px;
+    }
+	}
+	#triangle2{
+		width: $footer_height_half;
+		border-top: $footer_height_half solid transparent;
+		border-bottom: $footer_height_half solid transparent;
+		border-left: $footer_height_half solid $gray0;
+		box-sizing: content-box;
+	}
+	#list_wrap{
+		margin-left: -15px;
+		display: flex;
+		align-items: center;
+	}
+	.right{
+		flex-grow: 1;
+		text-align: right;
+		margin-right: 10px;
+		button{
+			background: $secondary_blue;
+			height: 30px;
+			line-height: 30px;
+			color: white;
+			margin-top: 4px;
+		}
+		.error{
+			color: $main_red;
+			margin-right: 15px;
+			display: inline-block;
+		}
+	}
+}

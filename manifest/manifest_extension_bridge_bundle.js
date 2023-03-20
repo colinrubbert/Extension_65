@@ -1,0 +1,2 @@
+(async globals=>{const frameBridge=new globals.FrameBridge(!1);globals.LOGGER.setFrameId(frameBridge.frameId);const state=new globals.ExtensionState(!0,frameBridge.version);try{const bridgeIframeUrl=state.getRemoteUrl("src/core/coreIframe.html");await frameBridge.setupRemote(bridgeIframeUrl),await state.init(!0)}catch(e){return void console.error("Unable to init Extension state!",e)}frameBridge.markReady(),globals.STATE=state})(IRX);
+//# sourceMappingURL=manifest_extension_bridge_bundle.js.map

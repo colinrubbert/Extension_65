@@ -1,0 +1,305 @@
+@import url(../../vendor/tailwindcss/tailwind.css);
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+.preload-wrapper, .spinner-layer {
+  will-change: transform, opacity !important;
+}
+
+.ifl-loading-spinner {
+  height: 40px;
+  width: 40px;
+  display: block;
+  border-radius: 50%;
+  border: 5px solid #e4e2e0;
+  border-top: 5px solid #2557a7;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 0.75rem auto;
+}
+
+#IRX_bus {
+  display: none !important;
+  position: fixed !important;
+  width: 0px !important;
+  bottom: 0px !important;
+  left: 0px !important;
+  visibility: hidden !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.ifl-loading-spinner {
+  height: 40px;
+  width: 40px;
+  display: block;
+  border-radius: 50%;
+  border: 5px solid #e4e2e0;
+  border-top: 5px solid #2557a7;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 0.75rem auto;
+}
+
+.ifl-btn-primary {
+  font-family: 'Noto Sans', sans-serif;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  line-height: 1.125;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #2557a7;
+  color: #ffffff;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.ifl-btn-primary:hover {
+  background-color: #164081;
+}
+
+.ifl-btn-primary:active {
+  background-color: #0d2d5e;
+}
+
+.ifl-btn-secondary {
+  font-family: 'Noto Sans', sans-serif;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  line-height: 1.125;
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+  color: #2557a7;
+  box-shadow: none;
+  border: 1px solid #d4d2d0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.ifl-btn-secondary:hover {
+  background-color: #eef1fe;
+  border-color: #6792f0;
+}
+
+.ifl-btn-alert {
+  font-family: 'Noto Sans', sans-serif;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  line-height: 1.125;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #a9252b;
+  color: #ffffff;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.ifl-btn-alert:hover {
+  background-color: #83161b;
+}
+
+.ifl-btn-alert:active {
+  background-color: #5f0c10;
+}
+
+#irx_modal_overlay {
+  font-family: 'Noto Sans', sans-serif;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2147483646;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#irx_modal_overlay > * {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+#irx_modal_overlay #irx_modal_inside {
+  width: 579px;
+  padding: 0;
+  border-radius: 10px;
+  background: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 1px solid #e4e2e0;
+}
+
+#irx_modal_overlay #irx_modal_inside #irx_modal_content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#irx_modal_overlay #irx_modal_inside #irx_modal_content .irx_center, #irx_modal_overlay #irx_modal_inside #irx_modal_content.irx_center {
+  text-align: center;
+}
+
+#irx_modal_overlay #irx_modal_inside #irx_modal_content .irx_illustration {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+#irx_modal_overlay #irx_modal_inside #irx_modal_content h1 {
+  font-size: 26px;
+  margin: 0;
+  color: #424242;
+  font-weight: 700;
+}
+
+#irx_modal_overlay #irx_modal_inside #irx_modal_content p {
+  padding: 10px 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+#irx_modal_overlay #irx_modal_inside #irx_modal_content img {
+  width: 400px;
+}
+
+#irx_modal_overlay #irx_modal_inside #irx_modal_bottom {
+  border-top: 1px solid #E4E2E0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  align-items: flex-end;
+}
+
+#irx_modal_overlay #irx_modal_inside .irx_modal_button {
+  font-weight: 700;
+  line-height: 40px;
+  height: 40px;
+  padding: 0 25px;
+  font-size: 14px;
+  width: 50px;
+  box-sizing: content-box;
+}
+
+body.irx_noscroll {
+  overflow: hidden !important;
+}
+
+.irx_xcom_frame_parent {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: transparent;
+  border: none;
+}
+
+#irx_inline_extract_button {
+  height: 26px;
+  display: flex;
+  background: none;
+  padding: 0;
+  margin: 0 5px 0 0;
+}
+
+#irx_inline_extract_button button {
+  line-height: 26px;
+  color: white;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  font-size: 12px;
+  height: 26px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: #2557A7;
+  padding: 0 8px;
+  border-radius: 0;
+  margin: 0;
+  border-right: 1px solid #164081;
+}
+
+#irx_inline_extract_button button * {
+  cursor: pointer;
+  font-family: 'Noto Sans', Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,sans-serif;
+}
+
+#irx_inline_extract_button button:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding-left: 15px;
+  padding-right: 12px;
+}
+
+#irx_inline_extract_button button:hover {
+  background: #164081;
+}
+
+#irx_inline_extract_button button:disabled {
+  cursor: disabled;
+  opacity: .4;
+}
+
+#irx_inline_extract_button button b {
+  display: inline-block;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+#irx_inline_extract_button #irx_img_wrap {
+  height: 26px;
+  width: 22px;
+  padding: 0 2px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: #2557A7;
+  min-width: 22px;
+  display: grid;
+  place-items: center;
+}
+
+#irx_inline_extract_button #irx_img_wrap img {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+#irx_inline_extract_button.irx_resume_db_resume {
+  margin: 10px 0 0 auto;
+}
+
+#irx_inline_extract_button.irx_hosted_jobs_candidates {
+  margin: 3px 10px 0 auto;
+}
+
+#irx_inline_extract_button.irx_hosted_jobs_candidates_new {
+  position: absolute;
+  right: 0;
+  top: 22px;
+}
+
+#irx_inline_extract_button.irx_hosted_jobs_candidate {
+  margin: 20px 0 0 auto;
+}
+
+#irx_inline_extract_button.irx_resume_list {
+  position: static;
+  right: 10px;
+  bottom: 5px;
+}
+
+#irx_inline_extract_button.irx_project_candidates {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+}

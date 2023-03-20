@@ -1,0 +1,278 @@
+.modal_overlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  // background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: 100ms linear opacity;
+  opacity: 1;
+  @apply bg-neutral-300;
+  &.ng-enter {
+    opacity: 0;
+  }
+  & > div{
+    @apply w-5/6 max-w-sm rounded-md bg-neutral-0;
+    // width: 86%;
+    // max-width:  400px;
+    // border-radius: 3px;
+    // border-bottom: 3px solid $primary_blue;
+    // background: white;
+    // padding: 15px 20px;
+  }
+
+
+  .wrap{
+    h3, h4{ 
+      text-align: center;
+      font-size: 13px;
+      color: $black;
+      font-weight: bold;
+      margin: 0 0 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      }
+    h4{
+      margin: 10px 15px 0;
+      font-size: 17px;
+      color: $primary_blue;
+    }
+    h3{
+      padding: 10px 15px 5px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      border-bottom: 1px solid $gray0;
+    }
+  }
+}
+
+#confirm{
+   .ifl-modal-content{}
+  #confirm_cont, #options_cont, #choice_cont{
+    padding: 10px 0 0;
+    b.validation_text{
+      padding: 0 15px;
+    }
+    div{
+      // margin-top: 10px;
+      // padding: 0 15px;
+      // margin-bottom: 20px;
+      @apply text-2 p-4; 
+      // font-size: 15px;
+      i{
+        display: block;
+        margin-top: 10px;
+        font-size:13px;
+      }
+      &.choice_list{
+        overflow-x:hidden;
+        overflow-y: auto;
+        max-height: calc(100vh - 140px);
+        position: relative;
+        a{
+          cursor: pointer;
+          transition: all, .5s, ease-in-out;
+          border-left: 3px solid $gray2;
+          background-color: $gray0;
+          display: block;
+          max-width: 100%;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          height: 30px;
+          line-height:30px;
+          margin:2px 0;
+          padding: 0 10px;
+          box-sizing: border-box;
+          &:hover{
+            border-left: 6px solid $main_orange;
+            background-color: $yellow_dim;
+          }
+          b{
+            display:inline-block;
+            padding: 0 15px 0 0;
+          }
+          i{
+            float: right;
+            font-size: 12px;
+            margin-top:0;
+            color: $black;
+            font-style: normal;
+            display: inline-block;
+          }
+        }
+        &.buttons{
+          text-align: center;
+        }
+        button{
+          margin: 0 auto;
+          width: 310px;
+          max-width: 310px;
+          margin-top: 5px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+    span{
+      margin-top: 10px;
+      text-align: center;
+      padding: 0 15px;
+      display: block;
+      &.exmargin{
+        margin-bottom: 40px;
+      }
+      .btn{
+        font-size: 13px;
+        line-height: 28px;
+        height: 28px;
+      }
+      a.cancel{
+        cursor: pointer;
+        font-size: 13px;
+        color: $primary_blue;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      &.buttons{
+        text-align: center;
+        a.cancel{
+          margin: 0 auto;
+          float: none;
+        }
+      }
+      select, input{
+        display:block;
+        width:100%;
+        padding:0 10px 0;
+        margin: 0;
+        height:38px;
+        line-height: 38px;
+        font-size:14px;
+        border-radius: 2px;
+        border:1px solid $gray1;
+        outline: none;
+        box-sizing: border-box;
+        &.invalid{
+          background: $red_dimmest;
+          border: 1px solid $primary_blue;
+        }
+      }
+      b.toggle_type{
+        display:block;
+        font-weight: normal;
+        font-size:12px;
+        color: $gray2;
+        a{
+          margin-top: 4px;
+          font-size:12px;
+          color: $primary_blue;
+          display:inline-block;
+          text-decoration: underline;
+        }
+      }
+    }
+    span.choice_footer{
+      // align-items: center;
+      // display: flex;
+      // background: $gray0;
+      // margin-top: 20px;
+      // padding: 5px 15px;
+      // justify-content: flex-end;
+      @apply border-t border-neutral-300 flex items-center justify-end px-4 py-2 space-x-2;
+      // .confirm_btn{
+      //   margin-left: 20px;
+      // }
+    }
+    &#choice_cont{
+      padding-top: 0px;
+      #choice_content{
+        padding-top: 10px;
+      }
+    }
+    div.choice_title{
+      height: 26px;
+      line-height: 26px;
+      width: 100%;
+      display: flex;
+      margin: 0;
+      padding: 0 8px;
+      background: $gray3;
+      color: $black;
+      align-items: center;
+      i{
+        overflow: hidden;
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+      }
+      span{
+        font-size: 12px;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+        flex: 1;
+        text-align: left;
+      }
+    }
+  }
+}
+
+
+// testing
+
+// .choice_list{
+//   overflow-x:hidden;
+//   overflow-y: auto;
+//   max-height: calc(100vh - 140px);
+//   position: relative;
+//   a{
+//     cursor: pointer;
+//     transition: all, .5s, ease-in-out;
+//     border-left: 3px solid $gray2;
+//     background-color: $gray0;
+//     display: block;
+//     max-width: 100%;
+//     text-overflow: ellipsis;
+//     overflow: hidden;
+//     white-space: nowrap;
+//     height: 30px;
+//     line-height:30px;
+//     margin:2px 0;
+//     padding: 0 10px;
+//     box-sizing: border-box;
+//     &:hover{
+//       border-left: 6px solid $main_orange;
+//       background-color: $yellow_dim;
+//     }
+//     b{
+//       display:inline-block;
+//       padding: 0 15px 0 0;
+//     }
+//     i{
+//       float: right;
+//       font-size: 12px;
+//       margin-top:0;
+//       color: $black;
+//       font-style: normal;
+//       display: inline-block;
+//     }
+//   }
+//   &.buttons{
+//     text-align: center;
+//   }
+//   button{
+//     margin: 0 auto;
+//     width: 310px;
+//     max-width: 310px;
+//     margin-top: 5px;
+//     text-overflow: ellipsis;
+//     white-space: nowrap;
+//   }
+// }

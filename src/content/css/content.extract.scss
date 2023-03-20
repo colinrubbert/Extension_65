@@ -1,0 +1,96 @@
+@import '../../shared/css/_main_components';
+@import "includes/main.content";
+@import "includes/uiGeneral.content";
+@import "includes/xcomm_shim.content";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+#irx_inline_extract_button{
+    height: 26px;
+    display: flex;
+    background: none;
+    padding: 0;
+    margin: 0 5px 0 0;
+    button{
+        line-height: 26px;
+        color: white;
+        cursor: pointer;
+        -webkit-font-smoothing: antialiased;
+        font-size: 12px;
+        height: 26px;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        background: #2557A7;
+        padding: 0 8px;
+        border-radius: 0;
+        margin: 0;
+        border-right: 1px solid #164081;
+        * {
+            cursor: pointer;
+            font-family: 'Noto Sans', Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,sans-serif;
+        }
+        &:first-child{
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            padding-left: 15px;
+            padding-right: 12px;
+        }
+        &:hover{
+            background: #164081;
+        }
+        &:disabled{
+            cursor: disabled;
+            opacity: .4;
+        }
+        b{
+            display: inline-block;
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: bold;
+        }
+    }
+    #irx_img_wrap {
+        height: 26px;
+        width: 22px;
+        padding: 0 2px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        background: #2557A7;
+        min-width: 22px;
+        display: grid;
+        place-items: center;
+        img {
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            overflow: hidden;
+        }
+    }
+    &.irx_resume_db_resume{
+        margin: 10px 0 0 auto;
+    }
+    &.irx_hosted_jobs_candidates{
+        margin: 3px 10px 0 auto;
+    }
+    &.irx_hosted_jobs_candidates_new{
+        position: absolute;
+        right: 0;
+        top: 22px;
+    }
+    &.irx_hosted_jobs_candidate{
+        margin: 20px 0 0 auto;
+    }
+    &.irx_resume_list{
+        position: static;
+        right: 10px;
+        bottom: 5px;
+    }
+    &.irx_project_candidates{
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+    }
+}

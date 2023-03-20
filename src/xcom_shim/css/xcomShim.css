@@ -1,0 +1,44 @@
+@import url(../../vendor/tailwindcss/tailwind.css);
+
+.preload-wrapper, .spinner-layer {
+  will-change: transform, opacity !important;
+}
+
+.ifl-loading-spinner {
+  height: 40px;
+  width: 40px;
+  display: block;
+  border-radius: 50%;
+  border: 5px solid #e4e2e0;
+  border-top: 5px solid #2557a7;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 0.75rem auto;
+}
+
+body {
+  background: transparent;
+}
+
+#loading {
+  display: flex;
+  width: 200px;
+  height: 200px;
+}
+
+iframe[id^=xcom\@] {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  visibility: hidden;
+  position: fixed;
+}
+
+iframe[id^=xcom\@].loaded {
+  visibility: visible;
+}

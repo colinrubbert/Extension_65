@@ -1,0 +1,74 @@
+@import '../../../shared/css/colors_and_reusables';
+@import "../../../shared/css/comm_bus";
+
+.ifl-loading-spinner {
+    height: 40px;
+    width: 40px;
+    display: block;
+    border-radius: 50%;
+    border: 5px solid $colors-neutral-300;
+    border-top: 5px solid $colors-primary-800;
+    animation: spin 1s linear infinite;
+    margin: 0 auto $spacing-3 auto;
+}
+
+.ifl-btn {
+    &-primary {
+        font-family: 'Noto Sans', sans-serif;
+        padding: $spacing-sc-3;
+        border-radius: $border-radius-md;
+        line-height: $line-heights-tighter;
+        font-weight: bold;
+        font-size: 16px;
+        background-color: $colors-primary-800;
+        color: $colors-neutral-0;
+        box-shadow: none;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        &:hover {
+            background-color: $colors-primary-900;
+        }
+        &:active {
+            background-color: $colors-primary-1000;
+        }
+    }
+    &-secondary {
+        font-family: 'Noto Sans', sans-serif;
+        padding: $spacing-sc-3;
+        border-radius: $border-radius-md;
+        line-height: $line-heights-tighter;
+        font-weight: bold;
+        font-size: 16px;
+        width: 100%;
+        color: $colors-primary-800;
+        box-shadow: none;
+        border: 1px solid $colors-neutral-400;
+        cursor: pointer;
+        background-color: transparent;
+        &:hover {
+            background-color: $colors-primary-200;
+            border-color: $colors-primary-600;
+        }
+    }
+    &-alert {
+        font-family: 'Noto Sans', sans-serif;
+        padding: $spacing-sc-3;
+        border-radius: $border-radius-md;
+        line-height: $line-heights-tighter;
+        font-weight: bold;
+        font-size: 16px;
+        background-color: $colors-alert-800;
+        color: $colors-neutral-0;
+        box-shadow: none;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        &:hover {
+            background-color: $colors-alert-900;
+        }
+        &:active {
+            background-color: $colors-alert-1000;
+        }
+    }
+}

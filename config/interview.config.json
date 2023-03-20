@@ -1,0 +1,45 @@
+{
+  "gcal": {
+    "page": {
+      "type": "[data-viewfamily=\"EVENT_EDIT\"]",
+      "details": "[role=\"tabpanel\"]:contains(\"details\")",
+      "tabPanel": "[role=\"tabpanel\"]:contains(\"details\") span > div > div",
+      "roleMain": "[role=\"main\"]",
+      "interior": {
+        "startDate": "[aria-label=\"Start date\"]",
+        "startTime": "[aria-label=\"Start time\"]",
+        "endTime": "[aria-label=\"End time\"]",
+        "title": "[aria-label=\"Title\"]",
+        "isCreate": "[data-is-create]"
+      }
+    },
+    "modal": {
+      "type": "[role=\"dialog\"], [js-modal]",
+      "title": "[aria-label=\"Add title and time\"], [aria-label=\"Add title\"], span:contains(\"Organizer: \"):visible",
+      "inside": "div[data-eventid]:first",
+      "sub": {
+        "location": "span[data-key=\"location\"]",
+        "expandable": "[data-expandable]",
+        "titleRow": " > div > div[tabindex=\"-1\"] > div:first",
+        "startDate": "[data-key=\"startDate\"]",
+        "addTime": "span:contains(\"Add time\"):visible",
+        "startTime": "[data-key=\"startTime\"]",
+        "endTime": "[data-key=\"endTime\"]"
+      }
+    },
+    "button": {
+      "type": "[role=\"button\"], button",
+      "save": ":visible:contains(\"Save\")",
+      "zoom": "div[role=\"button\"] a:contains(\"Make it a Zoom Meeting\")"
+    },
+    "event": {
+      "eventTab": "#tabEvent",
+      "selected": "[aria-controls=\"tabEvent\"][aria-selected=\"true\"], #tabEvent[aria-selected=\"true\"]",
+      "description": "span[data-key=\"description\"]:visible",
+      "editableDescription": "[contenteditable=\"true\"][aria-label=\"Description\"]",
+      "editableBlob": "html-blob:first",
+      "descButton": "span[data-key=\"description\"]:visible, span:contains(\"Add description\")",
+      "txData": "timezonedata"
+    }
+  }
+}

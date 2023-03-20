@@ -1,0 +1,17 @@
+<div id="{{ id }}" class="cleanslate" style="{{buttonStyle}}" title="{{buttonLabel}}">
+  <button id="irx_inline_extract_btn" data-irx-id="{{buttonId}}"><b>Extract</b></button>
+  {{#if showApiButton}}
+    {{#if disabled}}
+      <button title="{{pushLabel}}" id="irx_connected_push_extract_button" disabled>
+        <b>{{pushLabel}}</b>
+      </button>
+    {{else}}
+      <button title="{{pushLabel}}" id="irx_connected_push_extract_button">
+        <b>{{pushLabel}}</b>
+      </button>
+    {{/if}}
+  {{/if}}
+  <div id="irx_img_wrap">
+    <img src="{{#extension_url}}images/indeed_i.svg{{/extension_url}}" class="irx_extract_icon">
+  </div>
+</div>

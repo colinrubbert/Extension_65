@@ -1,0 +1,12 @@
+<div id="{{ wrapId }}" {{#if showCloseButton}}data-closable{{/if}}>
+    <div id="{{ modalInsideId }}">
+        <div id="irx_modal_content">
+            {{{ html }}}
+        </div>
+        {{#if showCloseButton}}
+            <div id="irx_modal_bottom">
+                <button role="button" id="{{ closeButtonId }}" class="irx_modal_button ifl-btn ifl-btn-primary ifl-btn-full">Close</button>
+            </div>
+        {{/if}}
+    </div>
+</div>

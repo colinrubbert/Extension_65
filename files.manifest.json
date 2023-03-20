@@ -1,0 +1,159 @@
+{
+    "xcom_window": [
+        "src/shared/scripts/shared.envGlobalsSetup.js",
+        "src/shared/css/shared.xcomWindow.css",
+        "src/vendor/chrome-extension-message-relay-v3/dist/message_relay.full.prod.js",
+        "src/shared/scripts/shared.loggableClass.js",
+        "src/shared/scripts/shared.xcomWindow.js"
+    ],
+    "page_primary_bundle": [
+        "src/shared/scripts/shared.envGlobalsSetup.js",
+        "src/vendor/chrome-extension-message-relay-v3/dist/message_relay.full.prod.js",
+        "src/shared/scripts/shared.loggableClass.js",
+        "src/page/scripts/page.logger.js"
+    ],
+    "page_extract_bundle": [
+        "src/page/scripts/page.extract.js"
+    ],
+    "content_primary_bundle": [
+        "src/shared/scripts/shared.envGlobalsSetup.js",
+        "src/vendor/jquery/dist/jquery.min.js",
+        "src/vendor/handlebars/dist/handlebars.min.js",
+        "src/shared/scripts/shared.utils.js",
+        "src/vendor/chrome-extension-message-relay-v3/dist/message_relay.full.prod.js",
+        "src/shared/scripts/shared.loggableClass.js",
+        "src/shared/scripts/shared.eventableClass.js",
+        "src/content/scripts/content.logger.js",
+        "src/content/scripts/content.contentUtils.js",
+        "src/shared/scripts/shared.storeUtils.js",
+        "src/shared/scripts/shared.frameBridge.js",
+        "src/content/scripts/content.liveReload.js",
+        "src/shared/scripts/shared.stateBaseClass.js",
+        "src/content/scripts/content.state.js",
+        "src/content/scripts/content.configTemplates.js",
+        "src/content/scripts/content.templates.js",
+        "src/content/scripts/content.uiGeneral.js",
+        "src/content/scripts/content.pageFeatureBaseClass.js"
+    ],
+    "content_calendar_interview_bundle": [
+        "src/content/scripts/interview_sites/content.interviewSite.base.js",
+        "src/content/scripts/interview_sites/content.interviewSite.gcal.js",
+        "src/content/scripts/content.interviews.js",
+        "src/content/scripts/content.clipboard.js",
+        "src/content/scripts/content.interviews.calendar.js"
+    ],
+    "content_extract_bundle": [
+        "src/content/scripts/content.clipboard.js",
+        "src/content/scripts/content.pageFeatureBaseClass.js",
+        "src/content/scripts/content.extract.js",
+        "src/content/scripts/content.pageButtons.js",
+        "src/content/scripts/content.xcomShim.js",
+        "src/content/scripts/content.extractInit.js"
+    ],
+    "content_calendar_interview_css": [
+        "src/content/css/content.interview.css"
+    ],
+    "content_extract_css": [
+        "src/content/css/content.extract.css"
+    ],
+    "core_primary_bundle": [
+        "src/shared/scripts/shared.envGlobalsSetup.js",
+        "src/vendor/@sentry/browser/build/bundle.min.js",
+        "src/vendor/chrome-extension-message-relay-v3/dist/message_relay.full.prod.js",
+        "src/shared/scripts/shared.utils.js",
+        "src/core/scripts/core.logger.js",
+        "src/shared/scripts/shared.loggableClass.js",
+        "src/shared/scripts/shared.eventableClass.js",
+        "src/shared/scripts/shared.sentry.js",
+        "src/shared/scripts/shared.stateBaseClass.js",
+        "src/shared/scripts/shared.frameBridge.js",
+        "src/core/scripts/core.configTemplates.js",
+        "src/shared/scripts/shared.api.js",
+        "src/core/scripts/core.state.js",
+        "src/core/scripts/core.interviews.js",
+        "src/core/scripts/core.extract.js",
+        "src/core/scripts/core.init.js"
+    ],
+    "xcom_shim_top_bundle": [
+        "src/shared/scripts/shared.envGlobalsSetup.js",
+        "src/shared/scripts/shared.utils.js",
+        "src/vendor/chrome-extension-message-relay-v3/dist/message_relay.full.prod.js",
+        "src/extension/scripts/extension.logger.js",
+        "src/shared/scripts/shared.loggableClass.js",
+        "src/shared/scripts/shared.eventableClass.js",
+        "src/shared/scripts/shared.storeUtils.js",
+        "src/shared/scripts/shared.stateBaseClass.js",
+        "src/shared/scripts/shared.extensionUtils.js",
+        "src/extension/scripts/extension.state.js",
+        "src/vendor/handlebars/dist/handlebars.min.js",
+        "src/content/templates/templates.precompiled.js",
+        "src/extension/scripts/extension.contentTemplates.js"
+    ],
+    "extension_primary_bundle": [
+        "src/shared/scripts/shared.envGlobalsSetup.js",
+        "src/vendor/@sentry/browser/build/bundle.min.js",
+        "src/shared/scripts/shared.utils.js",
+        "src/vendor/chrome-extension-message-relay-v3/dist/message_relay.full.prod.js",
+        "src/extension/scripts/extension.logger.js",
+        "src/shared/scripts/shared.loggableClass.js",
+        "src/shared/scripts/shared.extensionUtils.js",
+        "src/shared/scripts/shared.eventableClass.js",
+        "src/shared/scripts/shared.sentry.js",
+        "src/shared/scripts/shared.storeUtils.js",
+        "src/extension/scripts/extension.store.js",
+        "src/extension/scripts/extension.authCookies.js",
+        "src/shared/scripts/shared.stateBaseClass.js",
+        "src/shared/scripts/shared.frameBridge.js",
+        "src/extension/scripts/extension.state.js",
+        "src/shared/scripts/shared.api.js",
+        "src/extension/scripts/extension.events.js",
+        "src/vendor/handlebars/dist/handlebars.min.js",
+        "src/content/templates/templates.precompiled.js",
+        "src/extension/scripts/extension.contentTemplates.js",
+        "src/extension/scripts/extension.extract.js",
+        "src/extension/scripts/extension.logTools.js"
+    ],
+    "extension_bridge_bundle": [
+        "src/extension/scripts/extension.bridgeInit.js"
+    ],
+    "popup_top_css": [
+        "src/popup/css/popup.css"
+    ],
+    "popup_bottom_bundle": [
+        "src/extension/scripts/extension.logTools.js",
+        "src/extension/scripts/extension.notifications.js",
+        "src/popup/scripts/popup.iframeBindings.js",
+        "src/popup/scripts/popup.main.js"
+    ],
+    "xcom_shim_bottom_bundle": [
+        "src/xcom_shim/scripts/xcomShim.main.js"
+    ],
+    "xcom_shim_css": [
+        "src/xcom_shim/css/xcomShim.css"
+    ],
+    "service_worker_bundle": [
+        "src/vendor/@sentry/browser/build/bundle.min.js",
+        "src/shared/scripts/shared.envGlobalsSetup.js",
+        "src/shared/scripts/shared.utils.js",
+        "src/vendor/chrome-extension-message-relay-v3/dist/message_relay.full.prod.js",
+        "src/shared/scripts/shared.loggableClass.js",
+        "src/extension/scripts/extension.logger.js",
+        "src/shared/scripts/shared.sentry.js",
+        "src/shared/scripts/shared.extensionUtils.js",
+        "src/shared/scripts/shared.eventableClass.js",
+        "src/shared/scripts/shared.storeUtils.js",
+        "src/shared/scripts/shared.stateBaseClass.js",
+        "src/shared/scripts/shared.api.js",
+        "src/service_worker/sw.workarounds.js",
+        "src/extension/scripts/extension.store.js",
+        "src/extension/scripts/extension.authCookies.js",
+        "src/extension/scripts/extension.events.js",
+        "src/extension/scripts/extension.logTools.js",
+        "src/extension/scripts/extension.notifications.js",
+        "src/service_worker/sw.serviceWorkerBaseClass.js",
+        "src/service_worker/sw.userState.js",
+        "src/service_worker/sw.management.js",
+        "src/service_worker/sw.notificationSync.js",
+        "src/service_worker/sw.main.js"
+    ]
+}

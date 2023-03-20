@@ -1,0 +1,72 @@
+@import "../../../vendor/@indeed/ifl-primitives/build/aurora/scss/all";
+
+#irx_modal_overlay{
+    font-family: 'Noto Sans', sans-serif;
+    & > *{
+        font-family: 'Noto Sans', sans-serif;
+    }
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2147483646;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, .4);
+    #irx_modal_inside{
+        width: 579px;
+        padding: 0;
+        border-radius: 10px;
+        background: white;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border: 1px solid #e4e2e0;
+        #irx_modal_content{
+            .irx_center, &.irx_center{
+                text-align: center;
+            }
+            .irx_illustration{
+                display: flex;
+                justify-content: center;
+                margin: 40px 0;
+            }
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            h1{
+                font-size: 26px;
+                margin: 0;
+                color: $colors-neutral-900;
+                font-weight: 700;
+            }
+            p{
+                padding: 10px 0;
+                margin: 0;
+                font-size: 16px;
+            }
+            img{
+                width:400px;
+            }
+        }
+        #irx_modal_bottom{
+            border-top: 1px solid #E4E2E0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            align-items: flex-end;
+        }
+        .irx_modal_button{
+            font-weight: 700;
+            line-height: 40px;
+            height: 40px;
+            padding: 0 25px;
+            font-size: 14px;
+            width: 50px;
+            box-sizing: content-box;
+        }
+    }
+}

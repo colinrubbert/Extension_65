@@ -1,0 +1,305 @@
+button.toolbar_btn{
+  height: 25px;
+  width: 42px;
+  padding: 0;
+  margin: 3px 2px;
+  justify-content: center;
+  display: flex;
+  background: white !important;
+  border: 1px solid $gray2;
+  font-size: 13px;
+  border-radius: 2px;
+  align-items: center;
+  white-space: nowrap;
+  transition: 200ms all ease-in-out !important;
+  box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.15);
+  i, img{
+    height: 17px !important;
+    line-height: normal !important;
+    font-size: 17px;
+    color: $black;
+  }
+  img{
+    opacity: .7;
+    height: 22px !important;
+  }
+  &.disabled{
+    opacity: .4 !important;
+    cursor: not-allowed;
+  }
+  &:hover{
+    &:not(.disabled){
+      border: 1px solid $primary_blue;
+      box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.30);
+      i{
+        color: $primary_blue;
+      }
+      img{
+        opacity: .9;
+      }
+      &.danger{
+        border: 1px solid $main_red;
+        i{
+          color: $main_red;
+        }
+      }
+    }
+  }
+  &.with_text{
+    width: auto;
+    padding: 0 8px;
+    margin-right: 4px;
+    color: $main_gray !important;
+    i, img{
+      margin-left: 4px;
+    }
+  }
+  &.active{
+    background: $orange_dim !important;
+    border: 1px solid $main_orange;
+    i{
+      color: $black;
+    }
+  }
+}
+.zap_actions_dd{
+  position: relative;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+  display: flex;
+  margin: 0 !important;
+  height: 100%;
+  font-weight: normal;
+  &.hidden{
+    visibility: hidden;
+  }
+  .zap_actions_list > .btn-flat{
+    font-size: 13px;
+    line-height: inherit;
+    height: auto;
+    display: flex;
+    padding: 0 4px 0 12px;
+    border-radius: 0 !important;
+    opacity: .9;
+    color: white;
+    background: $secondary_blue;
+    border-left: 1px solid $main_blue;
+    font-weight: bold;
+    i{
+      line-height: inherit;
+      height: auto;
+      margin-left: 0;
+    }
+  }
+  .zap_actions_list_items{
+    background: white;
+    transform: scaleY(0);
+    transition: all 50ms ease-in-out;
+    transform-origin: top center;
+    position: absolute;
+    right: 0;
+    z-index: 99;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 2px;
+    .toolbar_btn{
+      text-align: left;
+      min-width: 200px;
+      color: $main_gray !important;
+      justify-content: left;
+      padding: 0 6px;
+      span{
+        flex-grow: 1;
+      }
+    }
+  }
+  .expanded{
+    .zap_actions_list_items{
+      transform: scaleY(1);
+    }
+  }
+  &:hover{
+    .zap_actions_list > .btn-flat{
+      opacity: 1;
+    }
+  }
+}
+
+
+.zap_buttons{
+  justify-content: center;
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  #zap_in, #zap_out, #zap_alt_actions{
+    position: relative;
+    max-width: 236px;
+    min-width: 236px;
+    &:hover{
+      .buttons{
+        opacity: 1;
+        transform: scaleY(1);
+      }
+    }
+    & > button{
+      text-transform: none;
+      width: 100%;
+      font-size: 16px;
+      line-height: 30px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 6;
+      i{
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        position: absolute;
+        font-size: 30px;
+        border: 1px solid white;
+        border-radius: 2px;
+      }
+    }
+    &:first-child i{
+      left: 6px;
+    }
+    &:not(:first-child){
+      margin-left: 6px;
+    }
+    &:last-child i {
+      right: 6px;
+    }
+    &#zap_out{
+      & > button{
+        background: $main_orange;
+        &.none_selected{
+          opacity: .3;
+        }
+      }
+      .none{
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 22px;
+        color: $main_red;
+        padding: 0px 8px;
+      }
+    }
+  }
+  .buttons{
+    background: white;
+    position: absolute;
+    z-index: 99;
+    bottom: 36px;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    transform: scaleY(0);
+    opacity: 0;
+    z-index: 5;
+    transition: all 200ms ease-in-out;
+    transform-origin: bottom center;
+    button{
+      text-align: left;
+      font-size: 13px;
+      line-height: 36px;
+      height: 36px;
+      border-radius: 0px;
+      padding: 0 0 0 8px;
+      box-shadow: none !important;
+      border: none;
+      text-transform: uppercase;
+      b{
+        max-width: 80%;
+        display: inline-block;
+        font-weight: normal;
+        color: white;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      i{
+        height: 36px;
+        line-height: 36px;
+        margin: 0;
+      }
+      will-change: transform;
+      &:first-of-type{
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+      }
+      &:hover{
+        background: white;
+        color: $black;
+        b{
+          color: $black;
+        }
+        i{
+          color: $primary_blue;
+        }
+      }
+      &:disabled{
+        cursor: disabled;
+        opacity: .4;
+      }
+      .badge{
+        margin-left: 0;
+        padding-left: 0;
+        line-height: 36px;
+        color: white;
+        font-size: 20px;
+      }
+    }
+    &#zap_out_menu{
+      button{
+        background: $main_orange;
+        &:hover{
+          background: white;
+          i{
+            color: $main_orange;
+          }
+        }
+        &.btn_disabled{
+          cursor: not-allowed !important;
+          opacity: .6;
+          color: white !important;
+          background: $main_orange;
+          i{
+            color: white !important;
+          }
+        }
+      }
+    }
+  }
+}
+div.toolbar_btn_group{
+  display: flex;
+  flex-wrap: nowrap;
+  .toolbar_btn{
+    &:hover{
+      z-index: 1;
+    }
+  }
+  .toolbar_btn:not(:first-of-type){
+    margin-left: -1px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .toolbar_btn:not(:last-of-type){
+    margin-right: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  &.small_btns{
+    .toolbar_btn{
+      width: 32px;
+      &.with_text{
+        width: auto;
+        padding: 0 6px;
+      }
+    }
+  }
+}

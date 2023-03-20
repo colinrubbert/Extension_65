@@ -1,0 +1,30 @@
+@import "colors_and_reusables";
+@import "../../vendor/@indeed/ifl-primitives/build/aurora/scss/_all.scss";
+
+.preload-wrapper, .spinner-layer{
+	will-change: transform, opacity !important;
+}
+
+$primary-color: $colors-primary-900 !default;
+$primary-color-light: $colors-primary-700;
+$primary-color-dark: darken($primary-color, 90%) !default; 
+
+$secondary-color: $secondary_blue;
+$success-color: color($main_green, "base") !default;
+$error-color: color($main_red, "base") !default;
+$link-color: $primary_blue !default;  
+$button-raised-color : white !default;
+$radio-fill-color: $primary_blue !default;
+
+.ifl-loading-spinner {
+    height: 40px;
+    width: 40px;
+    display: block;
+    border-radius: 50%;
+    border: 5px solid $colors-neutral-300;
+    border-top: 5px solid $colors-primary-800;
+    animation: spin 1s linear infinite;
+    margin: 0 auto $spacing-3 auto;
+}
+
+@import "../../vendor/tailwindcss/tailwind.css";

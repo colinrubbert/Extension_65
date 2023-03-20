@@ -1,0 +1,61 @@
+#bg-loader{
+  cursor: pointer;
+  *{
+    cursor: pointer;
+  }
+  width: 100%;
+  display:block;
+  background: $primary_blue;
+  overflow: hidden;
+  #bg-loader-inner {
+    padding: 0 100px;
+    text-align: center;
+    height:12px;
+    overflow:hidden;
+    display:block;
+    line-height:10px;
+    label {
+      line-height:10px;
+      font-size: 20px;
+      opacity: 0;
+      display:inline-block;
+      color: $primary_blue_light;
+      &:nth-child(6) {
+        animation: bg-loadbar-anim 2.3s infinite ease-in-out;
+      }
+      &:nth-child(5) {
+        animation: bg-loadbar-anim 2.3s 100ms infinite ease-in-out;
+      }
+      &:nth-child(4) { 
+        animation: bg-loadbar-anim 2.3s 200ms infinite ease-in-out;
+      }
+      &:nth-child(3) {
+        animation: bg-loadbar-anim 2.3s 300ms infinite ease-in-out;
+      }
+      &:nth-child(2) {
+        animation: bg-loadbar-anim 2.3s 400ms infinite ease-in-out;
+      }
+      &:nth-child(1) {
+        animation: bg-loadbar-anim 2.3s 500ms infinite ease-in-out;
+      }
+    }
+  }
+}
+@keyframes bg-loadbar-anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  33% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  66% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+}

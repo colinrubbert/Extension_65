@@ -1,0 +1,13 @@
+body.irx_noscroll{
+    overflow: hidden !important;
+}
+
+.irx_xcom_frame_parent{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: transparent;
+    border: none;
+}

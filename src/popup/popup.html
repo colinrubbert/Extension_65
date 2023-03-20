@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/shared/scripts/shared.envGlobalsSetup.js"></script>
+<link rel="stylesheet" href="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/shared/css/shared.xcomWindow.css">
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/vendor/chrome-extension-message-relay-v3/dist/message_relay.full.prod.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/shared/scripts/shared.loggableClass.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/shared/scripts/shared.xcomWindow.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/shared/scripts/shared.envGlobalsSetup.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/vendor/@sentry/browser/build/bundle.min.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/shared/scripts/shared.utils.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/vendor/chrome-extension-message-relay-v3/dist/message_relay.full.prod.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/extension/scripts/extension.logger.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/shared/scripts/shared.loggableClass.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/shared/scripts/shared.extensionUtils.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/shared/scripts/shared.eventableClass.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/shared/scripts/shared.sentry.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/shared/scripts/shared.storeUtils.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/extension/scripts/extension.store.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/extension/scripts/extension.authCookies.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/shared/scripts/shared.stateBaseClass.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/shared/scripts/shared.frameBridge.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/extension/scripts/extension.state.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/shared/scripts/shared.api.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/extension/scripts/extension.events.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/vendor/handlebars/dist/handlebars.min.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/content/templates/templates.precompiled.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/extension/scripts/extension.contentTemplates.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/extension/scripts/extension.extract.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/extension/scripts/extension.logTools.js"></script>
+<link rel="stylesheet" href="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/popup/css/popup.css">
+
+
+  <link rel="shortcut icon" type="image/png" href="../../images/indeed_icon_32.png">
+</head>
+<body class="xcom_full">
+    <iframe id="xcom@irxPopup"></iframe>
+
+    <div class="error" id="offline" style="display:none">
+        <img src="../../images/PopupIconOffline.svg" alt="Alert">
+        <h1>Offline</h1>
+        <p>
+            Connect to the internet to use Indeed Recruiter Extension.
+        </p>
+    </div>
+
+    <div class="error" id="no_advertiser_error" style="display:none">
+        <img src="../../images/PopupIconAlert.svg" alt="Alert">
+        <h1>No Employer Selected</h1>
+        <p>
+            Please open the Indeed Employers web page and employer account to use Indeed Recruiter Extension.
+        </p>
+        <a class="button" href="" id="select_advertiser_url" target="_blank">Select Employer</a>
+    </div>
+    </div>
+
+    <div class="error" id="generic_error" style="display:none">
+        <img src="../../images/PopupIconError.svg" alt="Alert">
+        <h1>Unable to load</h1>
+        <p>
+            Reload the extension or try again later.
+        </p>
+        <button class="button" id="reload_extension">Reload</button>
+    </div>
+
+    <div class="error" id="needs_update" style="display:none">
+        <img src="../../images/PopupIconAlert.svg" alt="Alert">
+        <h1>Out of date</h1>
+        <p>
+            Update the extension to continue working.
+        </p>
+        <a class="button" href="" id="update_url" target="_blank">Update Extension</a>
+    </div>
+
+    <script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/extension/scripts/extension.logTools.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/extension/scripts/extension.notifications.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/popup/scripts/popup.iframeBindings.js"></script>
+<script type="text/javascript" src="chrome-extension://kiodpphbmnmcmnfgpnmkkhmkllnlflef/src/popup/scripts/popup.main.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+{
+  "content_scripts": [
+    {
+      "matches": [
+        "https://calendar.google.com/calendar/*"
+      ],
+      "js": "{MANIFEST: content_primary_bundle, content_calendar_interview_bundle}",
+      "css": "{MANIFEST: content_calendar_interview_css}"
+    },
+    {
+      "matches": [
+        "https://employers.indeed.com/c#candidates/view?*",
+        "https://employers.qa.indeed.net/c#candidates/view?*",
+        "https://employers.qa.indeed.net/candidates/view?*",
+        "https://employers.indeed.com/candidates/view?*"
+      ],
+      "js": "{MANIFEST: content_primary_bundle, content_extract_bundle}",
+      "css": "{MANIFEST: content_extract_css}",
+      "_extract": {
+        "subsource": "smb_hosted",
+        "type": "hosted",
+        "page": "candidateViewPage",
+        "match": "^https:\\/\\/employers\\.(qa\\.)?indeed\\.(?:com|net)\\/(c#candidates|candidates)\\/view\\?"
+      }
+    },
+    {
+      "matches": [
+        "https://employers.indeed.com/candidates*",
+        "https://employers.qa.indeed.net/candidates*"
+      ],
+      "js": "{MANIFEST: content_primary_bundle, content_extract_bundle}",
+      "css": "{MANIFEST: content_extract_css}",
+      "_extract": {
+        "subsource": "smb_hosted",
+        "type": "hosted",
+        "page": "employerCandidateList",
+        "match": "^https:\\/\\/employers\\.(qa\\.)?indeed\\.(?:com|net)\\/candidates\\?.*id=[0-9a-z]+.*$"
+      }
+    },
+    {
+      "matches": [
+        "https://resumes.indeed.com/*",
+        "https://resumes.sandbox.qa.indeed.net/*",
+        "https://roz.sandbox.qa.indeed.net/*"
+      ],
+      "js": "{MANIFEST: content_primary_bundle, content_extract_bundle}",
+      "css": "{MANIFEST: content_extract_css}",
+      "_extract": {
+        "subsource": "sourcing_platform",
+        "type": "resume",
+        "page": "projectPage",
+        "match" : "^https:\\/\\/(resumes\\.indeed\\.com|resumes\\.sandbox\\.qa\\.indeed\\.net|roz\\.sandbox\\.qa\\.indeed\\.net)\\/hiring\\/projects\\/[0-9a-z-]+\\/?"
+      }
+    },
+    {
+      "matches": [
+        "https://resumes.indeed.com/resume/*",
+        "https://resumes.sandbox.qa.indeed.net/resume/*",
+        "https://roz.sandbox.qa.indeed.net/resume/*"
+      ],
+      "js": "{MANIFEST: content_primary_bundle, content_extract_bundle}",
+      "css": "{MANIFEST: content_extract_css}",
+      "_extract": {
+        "subsource": "sourcing_platform",
+        "type": "resume",
+        "page": "individualResume",
+        "match" : "/^https:\\/\\/(resumes\\.indeed\\.com|resumes\\.sandbox\\.qa\\.indeed\\.net|roz\\.sandbox\\.qa\\.indeed\\.net)\\/resume\\/[0-9a-z]+/"
+      }
+    }
+  ]
+}

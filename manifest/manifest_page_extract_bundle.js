@@ -1,0 +1,2 @@
+(globals=>{const RELAY=globals.RELAY;class Extract extends LoggableClass{constructor(){super(!1),RELAY.on("requestAdvertiserKey.extract",this._getAdvertiserKey.bind(this))}_getAdvertiserKey(){let advertiserKey;this.log("Request advertiser key from page.");try{advertiserKey=window.__INTERNAL_ONEHOST_APPDATA.advertiser.advertiserKey}catch(e){this.log("Error fetching advertiserKey from onehost data",e)}RELAY.send("returnAdvertiserKey.extract",RELAY.levels.content,{advertiserKey})}}globals.EXTRACT=new Extract})(IRX);
+//# sourceMappingURL=manifest_page_extract_bundle.js.map

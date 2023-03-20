@@ -1,0 +1,53 @@
+{
+  "extract": {
+    "resume": {
+      "individualResume": {
+        "interestedSel": "[data-cauto-id=\"last_email_alert\"]:contains(\"Interested\")",
+        "fullNameSel": "[data-cauto-id=\"action_bar_name\"]"
+      },
+      "projectPage": {
+        "individual": {
+          "interestedSel": "[data-cauto-id=\"project_details_resume_container\"] [data-cauto-id=\"candidate_information_contacted_chip_interested\"]",
+          "fullnameSel": "[data-cauto-id=\"resume_action_bar_name\"]"
+
+        }
+      }
+    },
+    "hosted": {
+      "openAndPausedSel": "button:contains(\"All Open and Paused Jobs\"):visible"
+    }
+  },
+  "buttons": {
+    "projectPage": {
+      "individual": {
+        "selectorSel": "[data-cauto-id=\"project_details_resume_content\"]",
+        "wrapSel": "[data-cauto-id=\"action_bar_candidate_information\"]",
+        "testInterestedFnSel": "[data-cauto-id=\"action_bar_candidate_information\"] div:contains(\"Interested\")",
+        "style": "margin: 10px 0 0 auto;"
+      },
+      "list": {
+        "wrapSel": "[data-cauto-id=\"project_details_resume_list_header\"]",
+        "parentSel": "[data-cauto-id=\"project_details_resume_list_header\"]",
+        "parentClosestSel": "section",
+        "customParentClass": "irx_project_btn_parent",
+        "customParentRule": ".irx_project_btn_parent div[data-cauto-id=\"project_details_resume_list_header\"]{ position: relative; padding-bottom: 35px !important; }",
+        "style": "position: absolute; right: 10px; bottom: 5px;"
+      }
+    },
+    "hosted": {
+      "candidateViewPage": {
+        "wrapSel": "#candDetailsActionButtonsFull",
+        "style": "margin: 20px 0 0 auto !important;"
+      },
+      "employerCandidateList": {
+        "wrapSel": "[data-testid=\"candidateListHeaderLayout\"]",
+        "style": "margin: 3px 10px 0 auto !important;",
+        "insertFn": {
+          "nextAll": "div:first",
+          "find": "[role=\"table\"]:first",
+          "before": "<div style=\"padding: 10px 0 15px !important;\">{{HTML}}</div>"
+        }
+      }
+    }
+  }
+}

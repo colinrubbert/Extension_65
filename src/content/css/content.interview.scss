@@ -1,0 +1,135 @@
+@import '../../shared/css/_main_components';
+@import "includes/main.content";
+@import "includes/uiGeneral.content";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+
+#zapinfo_create_interview_button_row{
+    &.irx_google_interview_btn{
+        display: flex;
+        min-height: 44px;
+        margin-top: 5px;
+        & > img{
+            margin: 0 18px 0 22px !important;
+        }
+    }
+}
+#zapinfo_create_interview_button{
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    color: $primary-color;
+    cursor: pointer;
+    box-sizing: border-box;
+    img{
+        width: 15px;
+        height: 15px;
+        margin-right: 6px;
+    }
+    &.zi_disabled{
+        opacity: .5;
+        cursor: not-allowed;
+    }
+    &.irx_google_interview_btn{
+        font-family: "Google Sans",Roboto,Arial,sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: .25px;
+        margin-right: 8px;
+        height: 36px;
+        background: white;
+        border-radius: 4px;
+        text-decoration: none;
+        text-transform: none;
+        min-width: auto;
+        outline: none;
+        overflow: hidden;
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
+        z-index: 0;
+        transition: background .2s .1s;
+        border: 1px solid $primary-color;
+        line-height: 0;
+        min-height: 36px;
+        justify-content: center;
+        align-items: flex-start;
+        display: inline-flex;
+        position: relative;
+        padding: 0 24px 0 36px;
+        img{
+            position: absolute;
+            left: 14px;
+        }
+    }
+}
+
+#zapinfo_join_interview_button{
+    display: flex;
+    a[role="button"]{
+        font-family: "Google Sans",Roboto,Arial,sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: .25px;
+        display: inline-block;
+        height: 36px;
+        line-height: 36px;
+        padding: 0 12px;
+        background: $primary-color;
+        color: white;
+        border-radius: 4px;
+        text-decoration: none;
+        text-transform: none;
+        min-width: auto;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
+        z-index: 0;
+        transition: background .2s .1s;
+        cursor: pointer;
+        img{
+            width: 15px;
+            height: 15px;
+            margin-right: 6px;
+        }
+    }
+    div#zapinfo_delete_interview_button{
+        border: 1px solid #D4D2D0;
+        border-radius: 4px;
+        height: 36px;
+        line-height: 36px;
+        padding: 0 12px;
+        display: flex;
+        font-family: "Google Sans",Roboto,Arial,sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: .25px;
+        margin-left: auto;
+        color: #A9252B;
+        cursor: pointer;
+        align-items: center;
+        margin-right: 10px;
+        img{
+            height: 22px;
+            margin-right: 5px;
+            fill: #A9252B;
+        }
+    }
+    &.irx_google_interview_btn {
+        padding-left: 65px;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        position: relative;
+        min-height: 44px;
+
+        & > img {
+            position: absolute;
+            width: 30px;
+            height: 20px;
+            top: 15px;
+            left: 24px;
+        }
+    }
+}

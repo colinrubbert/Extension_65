@@ -1,0 +1,17 @@
+<div id="{{ id }}" class="cleanslate {{css_class}}" title="{{button_label}}">
+  <button id="zi_inline_extract_btn"><b>Extract</b></button>
+  {{#if has_api_integrations}}
+    {{#if disabled}}
+      <button title="{{push_label}}" id="zi_inline_push_btn" disabled>
+        <b>{{push_label}}</b>
+      </button>
+    {{else}}
+      <button title="{{push_label}}" id="zi_inline_push_btn">
+        <b>{{push_label}}</b>
+      </button>
+    {{/if}}
+  {{/if}}
+  <div id="zi_img_wrap">
+    <img src="{{icon_url}}" class="wcd_icon">
+  </div>
+</div>

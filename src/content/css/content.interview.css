@@ -1,0 +1,325 @@
+@import url(../../vendor/tailwindcss/tailwind.css);
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+.preload-wrapper, .spinner-layer {
+  will-change: transform, opacity !important;
+}
+
+.ifl-loading-spinner {
+  height: 40px;
+  width: 40px;
+  display: block;
+  border-radius: 50%;
+  border: 5px solid #e4e2e0;
+  border-top: 5px solid #2557a7;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 0.75rem auto;
+}
+
+#IRX_bus {
+  display: none !important;
+  position: fixed !important;
+  width: 0px !important;
+  bottom: 0px !important;
+  left: 0px !important;
+  visibility: hidden !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.ifl-loading-spinner {
+  height: 40px;
+  width: 40px;
+  display: block;
+  border-radius: 50%;
+  border: 5px solid #e4e2e0;
+  border-top: 5px solid #2557a7;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 0.75rem auto;
+}
+
+.ifl-btn-primary {
+  font-family: 'Noto Sans', sans-serif;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  line-height: 1.125;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #2557a7;
+  color: #ffffff;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.ifl-btn-primary:hover {
+  background-color: #164081;
+}
+
+.ifl-btn-primary:active {
+  background-color: #0d2d5e;
+}
+
+.ifl-btn-secondary {
+  font-family: 'Noto Sans', sans-serif;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  line-height: 1.125;
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+  color: #2557a7;
+  box-shadow: none;
+  border: 1px solid #d4d2d0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.ifl-btn-secondary:hover {
+  background-color: #eef1fe;
+  border-color: #6792f0;
+}
+
+.ifl-btn-alert {
+  font-family: 'Noto Sans', sans-serif;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  line-height: 1.125;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #a9252b;
+  color: #ffffff;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.ifl-btn-alert:hover {
+  background-color: #83161b;
+}
+
+.ifl-btn-alert:active {
+  background-color: #5f0c10;
+}
+
+#irx_modal_overlay {
+  font-family: 'Noto Sans', sans-serif;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2147483646;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#irx_modal_overlay > * {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+#irx_modal_overlay #irx_modal_inside {
+  width: 579px;
+  padding: 0;
+  border-radius: 10px;
+  background: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 1px solid #e4e2e0;
+}
+
+#irx_modal_overlay #irx_modal_inside #irx_modal_content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#irx_modal_overlay #irx_modal_inside #irx_modal_content .irx_center, #irx_modal_overlay #irx_modal_inside #irx_modal_content.irx_center {
+  text-align: center;
+}
+
+#irx_modal_overlay #irx_modal_inside #irx_modal_content .irx_illustration {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+#irx_modal_overlay #irx_modal_inside #irx_modal_content h1 {
+  font-size: 26px;
+  margin: 0;
+  color: #424242;
+  font-weight: 700;
+}
+
+#irx_modal_overlay #irx_modal_inside #irx_modal_content p {
+  padding: 10px 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+#irx_modal_overlay #irx_modal_inside #irx_modal_content img {
+  width: 400px;
+}
+
+#irx_modal_overlay #irx_modal_inside #irx_modal_bottom {
+  border-top: 1px solid #E4E2E0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  align-items: flex-end;
+}
+
+#irx_modal_overlay #irx_modal_inside .irx_modal_button {
+  font-weight: 700;
+  line-height: 40px;
+  height: 40px;
+  padding: 0 25px;
+  font-size: 14px;
+  width: 50px;
+  box-sizing: content-box;
+}
+
+#zapinfo_create_interview_button_row.irx_google_interview_btn {
+  display: flex;
+  min-height: 44px;
+  margin-top: 5px;
+}
+
+#zapinfo_create_interview_button_row.irx_google_interview_btn > img {
+  margin: 0 18px 0 22px !important;
+}
+
+#zapinfo_create_interview_button {
+  font-family: 'Noto Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  color: #164081;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+#zapinfo_create_interview_button img {
+  width: 15px;
+  height: 15px;
+  margin-right: 6px;
+}
+
+#zapinfo_create_interview_button.zi_disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+#zapinfo_create_interview_button.irx_google_interview_btn {
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .25px;
+  margin-right: 8px;
+  height: 36px;
+  background: white;
+  border-radius: 4px;
+  text-decoration: none;
+  text-transform: none;
+  min-width: auto;
+  outline: none;
+  overflow: hidden;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 0;
+  transition: background .2s .1s;
+  border: 1px solid #164081;
+  line-height: 0;
+  min-height: 36px;
+  justify-content: center;
+  align-items: flex-start;
+  display: inline-flex;
+  position: relative;
+  padding: 0 24px 0 36px;
+}
+
+#zapinfo_create_interview_button.irx_google_interview_btn img {
+  position: absolute;
+  left: 14px;
+}
+
+#zapinfo_join_interview_button {
+  display: flex;
+}
+
+#zapinfo_join_interview_button a[role="button"] {
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .25px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 12px;
+  background: #164081;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  text-transform: none;
+  min-width: auto;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 0;
+  transition: background .2s .1s;
+  cursor: pointer;
+}
+
+#zapinfo_join_interview_button a[role="button"] img {
+  width: 15px;
+  height: 15px;
+  margin-right: 6px;
+}
+
+#zapinfo_join_interview_button div#zapinfo_delete_interview_button {
+  border: 1px solid #D4D2D0;
+  border-radius: 4px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 12px;
+  display: flex;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .25px;
+  margin-left: auto;
+  color: #A9252B;
+  cursor: pointer;
+  align-items: center;
+  margin-right: 10px;
+}
+
+#zapinfo_join_interview_button div#zapinfo_delete_interview_button img {
+  height: 22px;
+  margin-right: 5px;
+  fill: #A9252B;
+}
+
+#zapinfo_join_interview_button.irx_google_interview_btn {
+  padding-left: 65px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  position: relative;
+  min-height: 44px;
+}
+
+#zapinfo_join_interview_button.irx_google_interview_btn > img {
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  top: 15px;
+  left: 24px;
+}

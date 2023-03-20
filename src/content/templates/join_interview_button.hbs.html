@@ -1,0 +1,12 @@
+<div id="{{ id }}" class="cleanslate {{cssClass}}" data-irx-id="{{buttonId}}" data-guid="{{interviewGuid}}">
+    <img src="{{videoIconUrl}}" alt="Video">
+    <a role="button" class="indeed_interview_join_btn" title="Join Indeed Interview as Candidate or Recruiter" target="_blank" href="{{ interviewUrl }}">
+        <img src="{{indeedIconUrl}}" alt="Indeed">
+        Join Indeed Interview
+    </a>
+    {{#if showDeleteButton}}
+    <div id="zapinfo_delete_interview_button" role="button" title="This button removes the interview from our platform, but it will not delete the event from your calendar. Use your calendar's menu options to delete the event.">
+        Remove Indeed Interview
+    </div>
+    {{/if}}
+</div>
